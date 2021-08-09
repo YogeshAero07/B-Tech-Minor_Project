@@ -1,0 +1,101 @@
+/* Checkout Page Style */
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+  height: 100vh;
+}
+
+.checkout__personal,
+.checkout__edu,
+.checkout__preview {
+  border-radius: 10px;
+  border: 1px solid #dfdddd;
+  width: 60vw;
+  height: 70vh;
+  margin: auto;
+  background-color: #e6e6e6;
+}
+
+.checkout__personal h3,
+.checkout__edu h3,
+.checkout__preview h3 {
+  text-align: center;
+  margin: 35px 0;
+}
+
+.personal__inputs,
+.edu__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal__inputs p,
+.checkout__inputs p {
+  margin: -5px 15px;
+}
+
+.personal__one,
+.personal__two,
+.personal__three,
+.personal__four {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.personal__one input,
+.personal__two input,
+.personal__three input,
+.personal__four input {
+  padding: 5px 10px;
+  margin: 20px 15px;
+  width: 18vw;
+  border-radius: 5px;
+}
+
+.next__button {
+  margin: 20px 0;
+}
+
+.edu__inputs div {
+  margin: 15px 0;
+}
+
+.edu__inputs div p {
+  width: 30vw;
+  margin: auto;
+  padding: 4px 0;
+}
+
+.edu__inputs div input {
+  width: 30vw;
+  padding: 5px 10px;
+}
+
+.edu__button,
+.next__button {
+  width: 30vw;
+  margin: auto;
+}
+
+.preview__button {
+  width: 50vw;
+  margin: auto;
+}
+
+.preview__inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 50vw;
+}
+
+.preview__key p,
+.preview__value p {
+  margin: 12px 0;
+}

@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #d1d1cf;
+  padding: 20px 0;
+}
+
+.footer p {
+  font-size: 16px;
+}
+
+.footer a {
+  text-decoration: none;
+}

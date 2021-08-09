@@ -1,0 +1,50 @@
+/* JobPage Style */
+
+.jobpage {
+  display: flex;
+  flex-direction: column;
+}
+
+.jobpage__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 10px 10px;
+  background-color: #e6e6e6;
+  /* border: 1px solid rgb(201, 199, 199); */
+}
+
+.jobpage__title p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.jobpage__body {
+  display: flex;
+  margin: 0 50px;
+}
+
+.jobpage__list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  overflow-y: scroll;
+  width: auto;
+}
+
+.jobpage__list::-webkit-scrollbar,
+.jobpage__sidebox::-webkit-scrollbar {
+  display: none;
+}
+
+.jobpage__sidebox {
+  width: 30%;
+  height: 900px;
+  overflow-y: scroll;
+  border-radius: 4px;
+  padding: 20px 20px;
+  margin: 10px 10px;
+  /* border: 1px solid rgb(201, 199, 199); */
+}

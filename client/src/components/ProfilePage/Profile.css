@@ -1,0 +1,165 @@
+/* Profile Page Style */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.profile__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__dash {
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  height: 250px;
+  margin: 10px 0;
+  padding: 10px 10px;
+  border-radius: 4px;
+  background-color: #e6e6e6;
+}
+
+.dash__left {
+  display: flex;
+}
+
+.dash__left span {
+  margin: 0 20px;
+}
+
+.left__one {
+  display: flex;
+  align-items: center;
+}
+
+.left__two {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 40px;
+}
+
+.profile__dash img {
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+  margin: 10px 10px;
+}
+
+.dash__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 10px;
+}
+
+.profile__tabs {
+  width: 100%;
+  border-radius: 4px;
+  width: 97%;
+  background-color: #e6e6e6;
+}
+
+.profile__info {
+  overflow-y: scroll;
+  height: 450px;
+  background-color: #e6e6e6;
+  width: 97%;
+  margin: 10px 10px;
+  border-radius: 4px;
+  padding: 10px 10px;
+}
+
+.profile__info::-webkit-scrollbar {
+  display: none;
+}
+
+.profile__footer {
+  position: sticky;
+}
+
+/* Profile Info Component Style */
+
+.personal__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.personal__title h4 {
+  text-transform: capitalize;
+}
+
+.personal__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal__list li {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 10px 0;
+  list-style: none;
+}
+
+.personal__list li span {
+  display: flex;
+  margin: 0 20px;
+}
+
+.personal__list li span p {
+  margin: 0 10px;
+}
+
+.personal__list li label {
+  text-align: start;
+}
+
+/* Educational Info Component Style */
+
+.edu__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edu__title h4 {
+  text-transform: capitalize;
+}
+
+.edu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu__list li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 10px 10px;
+}
+
+.edu__list li span {
+  display: flex;
+}
+
+.edu__list li span p {
+  margin: 0 10px;
+}

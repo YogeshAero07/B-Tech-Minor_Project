@@ -1,0 +1,27 @@
+.jobpage__sidebox {
+  display: flex;
+  flex-direction: column;
+}
+
+.sideMenu__top {
+  display: flex;
+  flex-direction: column;
+}
+
+.top__one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.top__tow {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+}
+
+.sdieMenu__middle {
+  display: flex;
+  flex-direction: column;
+}

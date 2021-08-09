@@ -1,0 +1,10 @@
+/* Job Page Style */
+
+.job {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100vh;
+  background-color: #e6e6e6;
+}
