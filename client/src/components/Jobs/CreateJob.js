@@ -1,12 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CreateJob.css";
+import axios from "axios";
 import Button from "@material-ui/core/Button";
 
 // Homepage Components
 import Footer from "../Homepage/Footer";
 import Header from "../Homepage/Header";
 
-const CreateJob = () => {
+const CreateJob = ({ history }) => {
+  const [state, setState] = React.useState({
+    age: "",
+    name: "hai",
+  });
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    setState({
+      ...state,
+      [name]: event.target.value,
+    });
+  };
+
+  const [companyName, setCompanyName] = useState("");
+  const [designation, setDesignation] = useState("");
+  const [location, setLocation] = useState("");
+  const [applyLink, setApplyLink] = useState("");
+
+  const addJobs = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post("http://localhost:3000/addjobs/", {
+        companyName,
+        designation,
+        location,
+        applyLink,
+      });
+
+      history.push("/");
+      // localStorage.setItem("authToken", data.token);
+    } catch (error) {
+      console.log("error");
+    }
+  };
+
   return (
     <div className="create__job">
       {/* Create Job Navigation Menu */}
@@ -28,15 +64,35 @@ const CreateJob = () => {
         {/* Create Job Input Box */}
 
         <div className="create__inputs">
-          <form id="mainPart" className="input__box" noValidate>
-            <input required placeholder="Job Title" autoFocus />
-            <input required placeholder="Company" autoComplete="company" />
+          <form
+            id="mainPart"
+            className="input__box"
+            onSubmit={addJobs}
+            noValidate
+          >
+            <input
+              autoFocus
+              required
+              name="Company"
+              placeholder="Company"
+              value={companyName}
+              onChange={(e) => setCompanyName(e.target.value)}
+            />
             <input
               required
-              placeholder="Job Location"
-              autoComplete="job location"
+              name="JobTitle"
+              placeholder="Job Title"
+              value={designation}
+              onChange={(e) => setDesignation(e.target.value)}
             />
-            <select>
+            <input
+              required
+              name="JobLocation"
+              placeholder="Job Location"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+            />
+            {/* <select>
               <option value="">Employment Type</option>
               <option>None</option>
               <option>Full-time</option>
@@ -45,7 +101,14 @@ const CreateJob = () => {
               <option>Temporary</option>
               <option>Volunteer</option>
               <option>Internship</option>
-            </select>
+            </select> */}
+            <input
+              require
+              name="applyLink"
+              placeholder="Apply Link"
+              value={applyLink}
+              onChange={(e) => setApplyLink(e.target.value)}
+            />
             <Button
               type="submit"
               className="create__button"

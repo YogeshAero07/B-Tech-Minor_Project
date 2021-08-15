@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import Logo from "../../Images/MainLogo.png";
+import MobileMenu from "./MobileMenu";
 
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
@@ -18,14 +19,6 @@ import Hackthons from "../../Images/Hackthons.svg";
 import Bookmark from "../../Images/Bookmark.svg";
 import Search from "../../Images/SearchIcon.svg";
 import User from "../../Images/User.svg";
-
-// Navlist Components
-import Intership from "../NavList/Internship";
-import Job from "../NavList/Job";
-import Hackthon from "../NavList/Hackthon";
-import Notify from "../NavList/Notification";
-import Book from "../NavList/Bookmark";
-import Internship from "../NavList/Internship";
 
 const Header = () => {
   const [inputSearch, setInputSearch] = useState("");
@@ -99,6 +92,9 @@ const Header = () => {
         <input type="search" placeholder="Search..." />
         <img src={Search} alt="" />
       </div>
+      <div className="mobile__search">
+        <img src={Search} alt="" />
+      </div>
 
       {/* Navbar Profile Icon */}
 
@@ -135,6 +131,10 @@ const Header = () => {
           <MenuItem onClick={handleMenuLogout}>Sign Out</MenuItem>
         </Menu>
       </div>
+
+      {/* Mobile Hamberger Menu */}
+
+      <div className="mobile__menu">{MobileMenu}</div>
     </div>
   );
 };

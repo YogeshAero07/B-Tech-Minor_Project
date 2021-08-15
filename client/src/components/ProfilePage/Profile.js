@@ -23,6 +23,9 @@ import Button from "@material-ui/core/Button";
 // Navigate Tab Imports
 import { Tabs, Tab } from "@material-ui/core";
 
+// Image Upload
+import ImageUploading from "react-images-uploading";
+
 // Main function
 
 const Profile = (props) => {
@@ -63,7 +66,15 @@ const Profile = (props) => {
     console.log(event.target.files[0]);
   };
 
-  const fileUploadHandler = () => {};
+  // Image Upload Function
+
+  const [images, setImages] = React.useState([]);
+  const maxNumber = 69;
+  const onChange = (imageList, addUpdateIndex) => {
+    // data for submit
+    console.log(imageList, addUpdateIndex);
+    setImages(imageList);
+  };
 
   return (
     <div className="profile">
@@ -73,26 +84,87 @@ const Profile = (props) => {
         <Header />
       </div>
 
+      {/* Profile Image, Headings, and Update */}
+
       <div className="profile__body">
         <div className="profile__dash">
+          {/* Profile Image and Headings */}
+
           <div className="dash__left">
-            <div className="left__one">
-              <img
-                src="https://pbs.twimg.com/profile_images/1369487341371363334/n1HY4kwz_400x400.jpg"
-                alt="logo"
-              />
+            {/* Image Upload  */}
+
+            <div className="profile__img">
+              <ImageUploading
+                multiple
+                value={images}
+                onChange={onChange}
+                maxNumber={maxNumber}
+                dataURLKey="data_url"
+              >
+                {({
+                  imageList,
+                  onImageUpload,
+                  onImageUpdate,
+                  onImageRemove,
+                  isDragging,
+                  dragProps,
+                }) => (
+                  <div className="upload__image-wrapper">
+                    <button
+                      className="img__drop"
+                      style={isDragging ? { color: "red" } : null}
+                      onClick={onImageUpload}
+                      {...dragProps}
+                    >
+                      Click or Drop here
+                    </button>
+
+                    {/* Image upload map function */}
+
+                    {imageList.map((image, index) => (
+                      <div key={index} className="image-item">
+                        {/* Upload Image */}
+
+                        <div className="img__upload">
+                          <img src={image.data_url} alt="" width="100" />
+                        </div>
+
+                        {/* Upload and Remove Buttons */}
+
+                        <div className="image-item__btn-wrapper">
+                          <button onClick={() => onImageUpdate(index)}>
+                            Update
+                          </button>
+                          <button onClick={() => onImageRemove(index)}>
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </ImageUploading>
             </div>
-            <div className="left__two">
+
+            {/* Profile Headings */}
+
+            <div className="profile__headings">
               <h3>Yogesh Bhamare</h3>
               <h6> Front-end Developer</h6>
             </div>
           </div>
+
+          {/* Profile Update */}
+
           <div className="dash__right">
-            <Button variant="outlined" color="primary">
+            <Button variant="outlined" color="black">
               Update your profile
             </Button>
           </div>
         </div>
+
+        {/* Profile Tabs */}
+
         <div className="profile__tabs">
           <Tabs value={selectedTab} onChange={handleChanged}>
             <Tab label="Profile" />
@@ -126,11 +198,14 @@ const ProfileInfo = ({ personalInfo }) => {
       <div className="personal__title">
         <h4>Personal Information </h4>
         <p>
-          <EditIcon />
+          <Button variant="outlined" color="black">
+            Edit
+          </Button>
         </p>
       </div>
 
-      <hr />
+      <hr className="horizantal__line" />
+
       <div className="personal__list">
         <li>
           <span>

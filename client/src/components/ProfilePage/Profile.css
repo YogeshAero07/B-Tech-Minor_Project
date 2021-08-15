@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   width: 97%;
-  height: 250px;
+  height: 30vh;
   margin: 10px 0;
   padding: 10px 10px;
   border-radius: 4px;
@@ -28,16 +28,37 @@
   display: flex;
 }
 
-.dash__left span {
-  margin: 0 20px;
-}
+/* Image Upload Style */
 
-.left__one {
+.profile__img {
   display: flex;
   align-items: center;
 }
 
-.left__two {
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image-item__btn-wrapper {
+  display: flex;
+  margin-left: 10px;
+}
+button {
+  border-radius: 4px;
+  border: none;
+  background: lightgray;
+  padding: 4px 8px;
+  margin: 0 5px;
+  font-size: 12px;
+}
+
+.img__drop {
+  margin-left: 20px;
+}
+
+.profile__headings {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -46,8 +67,8 @@
 
 .profile__dash img {
   border-radius: 100px;
-  height: 200px;
-  width: 200px;
+  height: 130px;
+  width: 130px;
   margin: 10px 10px;
 }
 
@@ -67,12 +88,13 @@
 
 .profile__info {
   overflow-y: scroll;
-  height: 450px;
+  height: 50vh;
   background-color: #e6e6e6;
   width: 97%;
   margin: 10px 10px;
   border-radius: 4px;
   padding: 10px 10px;
+  scrollbar-width: none;
 }
 
 .profile__info::-webkit-scrollbar {
@@ -94,6 +116,10 @@
   display: flex;
   justify-content: space-between;
   padding: 5px 20px;
+}
+
+.horizantal__line {
+  margin-top: -10px;
 }
 
 .personal__title h4 {

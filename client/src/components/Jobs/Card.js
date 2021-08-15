@@ -55,7 +55,8 @@ const Card = (props) => {
 
         <div>
           <Button
-            // href={props.link}
+            href={props.link}
+            target="_blank"
             variant="outlined"
             type="button"
             onClick={handleOpen}

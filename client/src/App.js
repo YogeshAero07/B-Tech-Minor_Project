@@ -15,6 +15,7 @@ import Jobinfo from "./components/Jobs/Jobinfo";
 import Profile from "./components/ProfilePage/Profile";
 import HomePage from "./components/Homepage/HomePage";
 import CreateJob from "./components/Jobs/CreateJob";
+import MobileMenu from "./components/Homepage/MobileMenu";
 
 // Navlist Components
 import Intership from "./components/NavList/Internship";
@@ -42,6 +43,7 @@ const App = () => {
           <Route exact path="/hackthon" component={Hackthon} />
           <Route exact path="/notification" component={Notify} />
           <Route exact path="/bookmark" component={Book} />
+          <Route exact path="/mobmenu" component={MobileMenu} />
         </Switch>
       </div>
     </Router>

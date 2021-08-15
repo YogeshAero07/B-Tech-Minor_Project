@@ -81,3 +81,43 @@
 .header__search img {
   cursor: pointer;
 }
+
+.mobile__search {
+  margin-left: 14vw;
+}
+
+.mobile__menu {
+  margin-right: 20px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1160px) {
+  .header__search {
+    display: none;
+  }
+  .mobile__search {
+    display: block;
+  }
+}
+
+@media (min-width: 1160px) {
+  .mobile__search {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__icons {
+    display: none;
+  }
+  .header__center {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .mobile__menu {
+    display: none;
+  }
+}
