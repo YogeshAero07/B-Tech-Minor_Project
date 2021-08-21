@@ -4,10 +4,7 @@ import "./Register.css";
 
 //Material UI Libraries
 import React from "react";
-import Checkbox from "@material-ui/core/Checkbox";
-import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
 const Register = ({ history }) => {

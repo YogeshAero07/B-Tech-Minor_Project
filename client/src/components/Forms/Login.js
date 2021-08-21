@@ -51,22 +51,28 @@ const Login = ({ history }) => {
       setError(error.response.data.error);
       setTimeout(() => {
         setError("");
-      }, 5000);
+      }, 6000);
     }
   };
 
   return (
     <div className="login-page">
       <div className="login-body">
-        {error && <span className="error-message">{error}</span>}
+        {/* Login Error */}
+
+        <div className="login-error">{error && <span>{error}</span>}</div>
+
         {/* Login Title */}
+
         <div className="login-title">
           <label>
             <LockOutlinedIcon />
           </label>
           <h2>Sign in</h2>
         </div>
+
         {/* Login Inputs */}
+
         <div className="login-input">
           <form onSubmit={loginHandler} className="login-form" noValidate>
             {/* Login Email */}
@@ -114,7 +120,7 @@ const Login = ({ history }) => {
             {/* Login Button */}
 
             <div className="login-button">
-              <Button variant="outlined" color="primary" type="submit">
+              <Button variant="outlined" type="submit">
                 Sign In
               </Button>
             </div>
@@ -122,7 +128,7 @@ const Login = ({ history }) => {
             {/* Login Redirects */}
 
             <div className="redirect">
-              <a href="/forgotpassword">Forget password?</a>
+              <a href="/forgotpassword">Forget Password?</a>
               <p>
                 Don't have an account? <a href="/register"> Sign Up </a>
               </p>

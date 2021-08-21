@@ -4,16 +4,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1024px;
+  height: 100vh;
+  background: url(https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
 }
 
 .login-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 550px;
   width: 450px;
+  padding: 40px 0;
+  padding-left: 25px;
+  padding-right: 10px;
   margin: auto;
   background: #d1d1cf;
   border-radius: 7px;
@@ -22,10 +25,32 @@
   box-shadow: 0 0 14px 6px rgb(199 212 241);
 }
 
+/* Login Error Message */
+
+.login-error {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.login-error span {
+  margin: 20px 0;
+  color: rgb(216, 93, 93);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .login-title {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Login Title */
+
+.login-title {
+  margin: 10px auto;
 }
 
 .login-title label {
@@ -41,6 +66,8 @@
   color: #5f5f61;
 }
 
+/* Login Form */
+
 .login-form {
   display: flex;
   flex-direction: column;
@@ -48,47 +75,66 @@
 
 .login-form div {
   padding: 15px 0;
+  width: 100%;
+  margin: auto;
 }
 
 .login-form p {
   margin-bottom: 2px;
+  font-weight: bold;
+  color: #5f5f61;
 }
 
 .login-form input {
-  width: 380px;
+  width: 92%;
   padding: 10px 15px;
-  border: 1px solid rgb(179, 173, 173);
-  border-radius: 5px;
+  border: none;
+  border-radius: 10px;
   outline: none;
 }
 
 .login-form input:focus {
-  border: 2px solid rgb(31, 97, 219);
+  border: 1px solid rgb(31, 97, 219);
   outline: none;
 }
 
-.login-button button {
+/* Login Button */
+
+.login-button Button {
   border-radius: 4px;
   background: #d1d1cf;
   color: rgb(99, 87, 87);
   border: 1px solid rgb(119, 113, 113);
   font-size: 16px;
   font-weight: bold;
+  padding: 2px 12px;
+  margin: 0 5px;
 }
+
+/* Login Redirects */
 
 .redirect {
   display: flex;
-  width: 390px;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .redirect p {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .redirect a {
   color: rgb(70, 70, 180);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   padding: 0 5px;
+}
+
+/* Media Queries */
+
+@media (max-width: 540px) {
+  .login-body {
+    width: 90%;
+  }
 }

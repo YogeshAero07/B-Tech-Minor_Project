@@ -6,26 +6,10 @@ import Header from "../Homepage/Header";
 import Footer from "../Homepage/Footer";
 
 import axios from "axios";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import { Paper } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import { Link } from "react-router-dom";
 
 import "./Checkout.css";
-
-// import { makeStyles } from '@material-ui/core/styles';
-// import Typography from '@material-ui/core/Typography';
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-// import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   container: {
