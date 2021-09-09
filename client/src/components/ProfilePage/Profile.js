@@ -43,7 +43,7 @@ const Profile = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/displayprofile/${id}`)
+      .get(`https://gob-portal.herokuapp.com/api/auth/showprofile/${id}`)
       .then((res) => {
         setPosts(res.data.ques);
         console.log(res.data.ques);

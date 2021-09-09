@@ -19,7 +19,7 @@ const JobPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/displayjobs/")
+      .get("https://gob-portal.herokuapp.com/api/auth/showjobs")
       .then((res) => {
         const harshal = res.data.ques;
         setPosts(harshal);

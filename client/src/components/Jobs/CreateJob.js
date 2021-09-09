@@ -29,12 +29,15 @@ const CreateJob = ({ history }) => {
   const addJobs = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:3000/addjobs/", {
-        companyName,
-        designation,
-        location,
-        applyLink,
-      });
+      const { data } = await axios.post(
+        "https://gob-portal.herokuapp.com/api/auth/addjobs",
+        {
+          companyName,
+          designation,
+          location,
+          applyLink,
+        }
+      );
 
       history.push("/");
       // localStorage.setItem("authToken", data.token);

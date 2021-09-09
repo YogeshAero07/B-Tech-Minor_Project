@@ -39,7 +39,7 @@ const Login = ({ history }) => {
 
     try {
       const { data } = await axios.post(
-        "/api/auth/login",
+        "https://gob-portal.herokuapp.com/api/auth/login",
         { email, password },
         config
       );

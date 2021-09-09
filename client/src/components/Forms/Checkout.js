@@ -97,22 +97,25 @@ const Checkout = ({ history }) => {
   const registerHandler = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5000/profile/", {
-        firstName,
-        lastName,
-        mobileNumber,
-        date,
-        address,
-        country,
-        state,
-        city,
-        zip,
-        education,
-        institute,
-        branch,
-        cvv,
-        registerId,
-      });
+      const { data } = await axios.post(
+        "https://gob-portal.herokuapp.com/api/auth/profile",
+        {
+          firstName,
+          lastName,
+          mobileNumber,
+          date,
+          address,
+          country,
+          state,
+          city,
+          zip,
+          education,
+          institute,
+          branch,
+          cvv,
+          registerId,
+        }
+      );
       history.push("/login");
     } catch (error) {
       console.log("error");

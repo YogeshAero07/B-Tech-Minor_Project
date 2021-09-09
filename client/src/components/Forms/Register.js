@@ -1,9 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./Register.css";
 
 //Material UI Libraries
-import React from "react";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Button from "@material-ui/core/Button";
 
@@ -34,7 +33,7 @@ const Register = ({ history }) => {
 
     try {
       const { data } = await axios.post(
-        "/api/auth/register",
+        "https://gob-portal.herokuapp.com/api/auth/register",
         {
           username,
           email,
@@ -64,7 +63,9 @@ const Register = ({ history }) => {
   return (
     <div className="register-page">
       <div className="register-body">
-        {error && <span className="error-message">{error}</span>}
+        {/* Register Error */}
+
+        <div className="register-error">{error && <span>{error}</span>}</div>
 
         {/* Register Title */}
 

@@ -3,10 +3,9 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-require("./questionschema")
+require("./questionschema");
 
 const UserSchema = new mongoose.Schema({
-
   _id: mongoose.Schema.Types.ObjectId,
 
   username: {
@@ -32,11 +31,9 @@ const UserSchema = new mongoose.Schema({
   profile: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "profile",
-    
   },
   // resetPasswordToken: String,
   // resetPasswordExpire: Date,
-  
 });
 
 UserSchema.pre("save", async function (next) {
@@ -53,18 +50,15 @@ UserSchema.methods.matchPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-
-
 UserSchema.methods.getSignedJwtToken = function () {
-  return jwt.sign({ id: this._id }, "onedayharshalwillbeagoodengineerandgooddevloper", {
-    expiresIn: "10min",
-   
-  });
-  
-  
+  return jwt.sign(
+    { id: this._id },
+    "onedayharshalwillbeagoodengineerandgooddevloper",
+    {
+      expiresIn: "10min",
+    }
+  );
 };
-
-
 
 UserSchema.methods.getResetPasswordToken = function () {
   const resetToken = crypto.randomBytes(20).toString("hex");
@@ -84,4 +78,3 @@ UserSchema.methods.getResetPasswordToken = function () {
 const User = mongoose.model("register", UserSchema);
 
 module.exports = User;
-
