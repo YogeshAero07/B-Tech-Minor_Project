@@ -12,7 +12,7 @@
 # `Live Demo`
 
 
-[Click Here](https://b-tech-minor-project.herokuapp.com)
+[Click Here](https://job-portal-college-proje-1.web.app/)
 
 
 
