@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./PrivateScreen.css";
-import HomePage from "../Homepage/HomePage";
+import HomePage from "../LandingPage/Home/Home";
 
 const PrivateScreen = ({ history }) => {
   const [error, setError] = useState("");

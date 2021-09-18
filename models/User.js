@@ -27,13 +27,10 @@ const UserSchema = new mongoose.Schema({
     minlength: 6,
     select: false,
   },
-
   profile: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "profile",
   },
-  // resetPasswordToken: String,
-  // resetPasswordExpire: Date,
 });
 
 UserSchema.pre("save", async function (next) {

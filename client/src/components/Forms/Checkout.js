@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-// import { useHistory } from "react-router-dom";
 
 // Homepage Components
-import Header from "../Homepage/Header";
-import Footer from "../Homepage/Footer";
+import Header from "../LandingPage/Header/Header";
+import Footer from "../LandingPage/Footer/Footer";
 
 import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";

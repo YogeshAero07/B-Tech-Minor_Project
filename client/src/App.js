@@ -1,28 +1,32 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Routing
-import PrivateRoute from "./components/routing/PrivateRoute";
+import PrivateRoute from "./components/Routing/PrivateRoute";
+import PrivateScreen from "./components/screens/PrivateScreen";
 
 // Form Components
-import PrivateScreen from "./components/screens/PrivateScreen";
-import Login from "./components/Forms/Login";
-import Register from "./components/Forms/Register";
-import ForgotPass from "./components/Forms/ForgotPass";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
+import ForgotPass from "./components/ForgetPassword/ForgotPass";
 import Checkout from "./components/Forms/Checkout";
-import Jobinfo from "./components/Jobs/Jobinfo";
+
+// Create Job Components
+import CreateJob from "./components/CreateJob/CreateJob/CreateJob";
+import Jobinfo from "./components/CreateJob/JobInfo/Jobinfo";
+
+// Profile Components
+import Profile from "./components/Profile/Profile";
 
 // Homepage Components
-import Profile from "./components/ProfilePage/Profile";
-import HomePage from "./components/Homepage/HomePage";
-import CreateJob from "./components/Jobs/CreateJob";
-import MobileMenu from "./components/Homepage/MobileMenu";
+import HomePage from "./components/LandingPage/Home/Home";
+import MobileMenu from "./components/LandingPage/MobileMenu/MobileMenu";
 
-// Navlist Components
-import Intership from "./components/NavList/Internship";
-import Job from "./components/NavList/Job";
-import Hackthon from "./components/NavList/Hackthon";
-import Notify from "./components/NavList/Notification";
-import Book from "./components/NavList/Bookmark";
+// Navbar Components
+import Intership from "./components/Navbar/Internship/Internship";
+import Job from "./components/Navbar/Jobs/Job";
+import Hackthon from "./components/Navbar/Hackthon/Hackthon";
+import Notification from "./components/Navbar/Notification/Notification";
+import Bookmark from "./components/Navbar/Bookmark/Bookmark";
 
 const App = () => {
   return (
@@ -41,8 +45,8 @@ const App = () => {
           <Route exact path="/internship" component={Intership} />
           <Route exact path="/job" component={Job} />
           <Route exact path="/hackthon" component={Hackthon} />
-          <Route exact path="/notification" component={Notify} />
-          <Route exact path="/bookmark" component={Book} />
+          <Route exact path="/notification" component={Notification} />
+          <Route exact path="/bookmark" component={Bookmark} />
           <Route exact path="/mobmenu" component={MobileMenu} />
         </Switch>
       </div>

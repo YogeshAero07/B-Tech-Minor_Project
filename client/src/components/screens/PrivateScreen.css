@@ -18,3 +18,18 @@
 .error-message h2 {
   margin: 20px 0;
 }
+
+@media (max-width: 540px) {
+  .error-message h1 {
+    margin: 10px 0;
+    font-size: 25px;
+  }
+
+  .error-message h2 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .error-message h3 {
+    font-size: 15px;
+  }
+}
